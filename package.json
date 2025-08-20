@@ -1,15 +1,18 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Node.js practice project",
+  "main": "index.js", 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Day1/server.js",
+  "dev:day1": "nodemon Day1/server.js",
+  "dev:day2": "nodemon Day2/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "devDependencies": {}
 }
