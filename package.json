@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node Day1/server.js",
   "dev:day1": "nodemon Day1/server.js",
-  "dev:day2": "nodemon Day2/server.js"
+  "dev:day2": "nodemon Day2/index.js"
   },
   "keywords": [],
   "author": "Your Name",
