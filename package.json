@@ -2,17 +2,20 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Node.js practice project",
-  "main": "index.js", 
+  "main": "index.js",
   "scripts": {
     "start": "node Day1/server.js",
-  "dev:day1": "nodemon Day1/server.js",
-  "dev:day2": "nodemon Day2/index.js"
+    "dev:day1": "nodemon Day1/server.js",
+    "dev:day2": "nodemon Day2/index.js",
+    "dev:day3": "nodemon Day3/server.js"
   },
   "keywords": [],
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
-  },
-  "devDependencies": {}
+    "dotenv": "^17.2.1",
+    "email-validator": "^2.0.4",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.2"
+  }
 }

@@ -1,0 +1,36 @@
+//username
+//password
+//email
+//createdAt
+const mongoose = require("mongoose");
+
+var validator = require("email-validator");
+
+const userSchema = new mongoose.Schema ({
+    username: {
+        required: [true, "Please provide a username"],
+        type: String,
+        unique: true,
+    },
+    password:{
+        required: [true, "Please provide a password"],
+        type: String,
+    },
+    email: {
+        required :[true, "Please provide your email"],
+        validation: {
+            validator: function (v) {
+                return validator.validate(v); // true;
+            },
+             message: "Please provide a valid email",  //(props) => `${props.value} is not valid phone number!`
+        },
+        unique:true,
+    },
+    createdAt: {
+        type:Date,
+        default: Date.now(),
+    },
+});
+
+const UserModel = mongoose.model('User', username);
+module.exports = UserModel
