@@ -6,7 +6,7 @@ exports.getUserById= function (req, res) {
 
 
 exports.createUser= async function (req, res) {
-    const {username,email,password}=(req.body);
+    const {username,email,password}=req.body;
     try {
         await UserModel.create({username,email,password});
     } catch (error) {
