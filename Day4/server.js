@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const app = require("./app");
+const app = require("./api");
 
 const port = 8080;
 const server = app.listen(port, () => {
