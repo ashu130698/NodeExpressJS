@@ -25,7 +25,7 @@ exports.getUserById = async function (req, res) {
   } catch (error) {
     res.status(500).json({
       status: "fail",
-      message: err.message,
+      message: error.message,
     });
     return;
   }
@@ -54,6 +54,21 @@ exports.createUser = async function (req, res) {
     });
 };
 
-exports.updateUserById = async function (req, res) {};
+exports.updateUserById = async function (req, res) {
+  let user;
+  try {
+    user = await UserModel.findByIdAndDelete(id);
+  } catch (error) {
+    res.status(500).json({
+      status: "fail",
+      message: "error.message",
+    });
+    return;
+  }
+  res.status(200).json({
+    status: "success",
+    data: user
+  })
+};
 
 exports.deleteUserById = async function (req, res) {};
